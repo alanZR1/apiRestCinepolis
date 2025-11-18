@@ -30,7 +30,6 @@ public class PeliculasServImp {
 		for (Peliculas p:peliculaDao.findAll()) {
 			// si tienes tipos de datos primitivos y estan parseados compararlos con .equals
 			if (p.getNombre().equals(pelicula.getNombre())) {
-				bandera = true;
 				return "nombreYaExiste";
 			}
 			if (!bandera) {
