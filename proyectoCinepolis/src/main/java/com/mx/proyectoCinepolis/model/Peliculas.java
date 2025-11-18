@@ -1,17 +1,16 @@
 package com.mx.proyectoCinepolis.model;
 
+import java.sql.Date;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
-
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.sql.Date;
 
 @Entity
 @Table(name = "PELICULAS")
@@ -22,7 +21,7 @@ public class Peliculas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // autoincrementable
-    @Column(name = "ID_PELICULA", columnDefinition = "INT", nullable = false)
+    @Column(name = "ID_PELICULA", columnDefinition = "NUMBER", nullable = false)
     private Long idPelicula;
 
     @Column(name = "NOMBRE",columnDefinition = "VARCHAR2(100)", nullable = false)
@@ -33,4 +32,4 @@ public class Peliculas {
 
     @Column(name = "PRECIO", columnDefinition = "NUMBER(6,2)", nullable = false)
     private Float precio;
-}
+}  
